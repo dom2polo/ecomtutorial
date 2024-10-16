@@ -1,7 +1,7 @@
 "use client"
 
 import { PRODUCT_CATEGORIES } from "@/config"
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import NavItem from "./NavItem"
 
 const NavItems = () => {
@@ -30,6 +30,7 @@ const NavItems = () => {
                 return (
                   <NavItem
                     category={category}
+                    close={close}
                     handleOpen={handleOpen}
                     isOpen={isOpen}
                     key={category.value}
