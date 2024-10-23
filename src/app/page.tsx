@@ -3,7 +3,7 @@ import {
   Button, 
   buttonVariants 
 } from "@/components/ui/button";
-import { Truck, BadgeCheck , Leaf, Phone } from "lucide-react";
+import { Truck, BadgeCheck , Leaf } from "lucide-react";
 import Link from "next/link";
 
 const perks = [
@@ -22,38 +22,40 @@ const perks = [
     Icons: Leaf,
     description: "We are committed to sustainable fashion, using eco-friendly materials and processes."
   },
-  {
-    name: "Exceptional Customer Support",
-    Icons: Phone,
-    description: "Our dedicated support team is here to assist you 24/7 for a seamless shopping experience."
-  }
 ]
 
 
 export default function Home() {
   return (
-    <>
-  <MaxWidthWrapper>
-    <div className="py-20 max-auto text-center flex flex-col items-center max-w-3xl">
-      <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-        Your Market Place for High-Quality{' '}
-        <span className="text-gray-600">
-          K'nyaw Clothing
-        </span>
-        .
-      </h1>
-        <p className="mt-6 text-lg max-w-prose text-muted-foreground">Welcome to HteeShop. Every item on our 
-          platform is verified by our team to make 
-          sure you have the best shopping experience
-        </p>
-        <div className="flex flex-col sm:flex-row gap-4 mt-6">
-        <Link href="/products" className={buttonVariants()}> Browse Trending </Link>
-        <Button variant='ghost'>Our Quality Promise &rarr; </Button>
+  <>
+    <MaxWidthWrapper>
+        <div className='py-20 mx-auto text-center flex flex-col items-center max-w-3xl'>
+          <h1 className='text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl'>
+            Your marketplace for high-quality{' '}
+            <span className='text-gray-600'>
+              K'nyaw Clothing
+            </span>
+            .
+          </h1>
+          <p className='mt-6 text-lg max-w-prose text-muted-foreground'>
+            Welcome to HteeShop. Every asset on our
+            platform is verified by our team to ensure our
+            highest quality standards.
+          </p>
+          <div className='flex flex-col sm:flex-row gap-4 mt-6'>
+            <Link
+              href='/products'
+              className={buttonVariants()}>
+              Browse Trending
+            </Link>
+            <Button variant='ghost'>
+              Our quality promise &rarr;
+            </Button>
+          </div>
         </div>
-    </div>
 
-    {/* TODO list: products */}
-  </MaxWidthWrapper>
+      {/* TODO list: products */}
+    </MaxWidthWrapper>
 
   <section className="border-t border-gray-200 bg-gray-50">
     <MaxWidthWrapper className="py-20">
